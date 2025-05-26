@@ -15,8 +15,6 @@
  * @author          Anam
  */
 
-use Anam\GutenbergStarter\Shortcode\Shortcode_Breweries;
-use Anam\GutenbergStarter\Shortcode\Shortcode_Demo;
 
 // Your code starts here.
 
@@ -28,8 +26,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 require_once plugin_dir_path( __FILE__ ) . 'inc/cpt/brew.php';
 require_once plugin_dir_path( __FILE__ ) . 'inc/cpt/demo.php';
-require_once plugin_dir_path( __FILE__ ) . 'inc/shortcode/demo.php';
 require_once plugin_dir_path( __FILE__ ) . 'inc/shortcode/brew.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/shortcode/demo.php';
 /**
  * Initialize the custom post types.
  */
@@ -37,7 +35,3 @@ Breweries::init();
 Shortcode_Breweries::init();
 Demo::init();
 Shortcode_Demo::init();
-/**
- * Include the custom taxonomy files.
- */
-//phpcs:ignore require_once plugin_dir_path( __FILE__ ) . 'inc/taxonomy/brewery-type.php';
